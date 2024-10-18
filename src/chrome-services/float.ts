@@ -197,9 +197,7 @@ function highlightWord(word: TransformedSkills, element = document.body) {
   }
 }
 
-// todo: floating div (in chatgpt).
 // todo: create some constants for the message passing
-// todo: clean up the setupux logic its impossible to find anything
 
 /**
  * Create the floating div, tabs, assign it CSS styling, and add the necessary

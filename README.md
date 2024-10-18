@@ -27,10 +27,6 @@ The project uses create-react-app with craco to manage the webpack configuration
 
 *Test Mode:* There is a debug value that will disable all API calls and force the output to write to the console. This is useful for testing without affecting the backend or database.  Test mode is stored in the browser session.
 
-### Future State
-
-See [todos](docs/todo.md) for more details
-
 
 ### Known Issues
 
