@@ -1,0 +1,186 @@
+.dc_none {
+  display: none !important;
+}
+
+.dc_block {
+  display: block !important;
+}
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Main div */
+#floating-div {
+  position: fixed;
+  top: 150px;
+  left: 20px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+  animation: floatIn 1s ease-out forwards;
+  padding-bottom: 20px;
+}
+
+.dc_floattitle {
+  font-weight: bold;
+}
+
+.dc_floatlogo {
+  max-width: 100%;
+  cursor: move;
+}
+
+/* loading while calculating tech terms */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  /* Light border for the spinner */
+  border-top: 4px solid #007bff;
+  /* Color for the spinner */
+  border-radius: 50%;
+  width: 20px;
+  /* Spinner size */
+  height: 20px;
+  /* Spinner size */
+  animation: spin 1s linear infinite;
+  /* Spin animation */
+  margin: auto;
+}
+
+.spinnerlarge {
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dc_total {
+  font-size: 20px;
+}
+
+.dc_skillcontainer {
+  overflow: scroll;
+  width: 100%;
+  padding-left: 5px;
+  font-size: medium;
+  padding-top: 20px;
+  height: 375px;
+  text-align: left;
+}
+
+.dc_titlecontainer {
+  overflow: scroll;
+  width: 100%;
+  padding-left: 5px;
+  font-size: medium;
+  padding-top: 20px;
+  height: 375px;
+  text-align: left;
+}
+
+.dc_skillitem {
+  cursor: pointer;
+
+}
+
+.dc_skillitem:hover {
+  font-weight: 700;
+}
+
+
+
+
+
+/* Parent div containing tabs and content */
+.dc_tab_parent {
+  display: flex;
+  width: 100%;
+  height: 420px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Tabs container aligned vertically */
+.dc_tabs {
+  display: flex;
+  flex-direction: column;
+  /* Arrange the tabs vertically */
+  justify-content: flex-start;
+  /* Align tabs to the top */
+  align-items: flex-start;
+  height: 100%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+  padding-top: 75px;
+  width: 33px;
+  min-width: 33px;
+  gap: 10px;
+}
+
+/* Each tab button */
+.dc_tab {
+  transform: rotate(-90deg);
+  /* Rotate text counterclockwise */
+  transform-origin: left top;
+  /* Adjust origin for proper alignment */
+  white-space: nowrap;
+  margin-bottom: 10px;
+  background-color: inherit;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Hover and active states for tabs */
+.dc_tab:hover {
+  font-weight: 700;
+}
+
+.dc_tab.active {
+  font-weight: 700;
+}
+
+/* Content area for the tab content */
+.dc_tab-content {
+  flex-grow: 1;
+  /* Take up remaining space */
+  padding: 10px;
+  display: none;
+  /* Hidden by default */
+  border-left: 1px solid #ccc;
+}
+
+/* Show the active tab content */
+.dc_tab-content.active {
+  display: block;
+}

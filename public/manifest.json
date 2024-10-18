@@ -1,0 +1,50 @@
+{
+  "name": "Tech Tutor",
+  "short_name": "Tech Tutor",
+  "description": "Tech Tutor is a Chrome extension that helps you learn new skills and improve your technical recruiting performance.",
+  "homepage_url": "http://www.sawyerit.com/webstore",
+  "version": "0.0.1",
+  "version_name": "0.0.1",
+  "manifest_version": 3,
+  "minimum_chrome_version": "88",
+  "host_permissions": ["*://*/*"],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "cookies",
+    "storage",
+    "webNavigation",
+    "scripting",
+    "contextMenus"
+  ],
+  "icons":
+    {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+    },
+  "background": {
+    "service_worker": "static/js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["static/css/skill.css","static/css/float.css"]
+    }
+  ],
+  "web_accessible_resources":[    {
+    "resources": [
+      "img/copilot.webp"
+    ],
+    "matches": ["<all_urls>"]
+  }],
+  "action": {
+    "default_popup": "",
+    "default_icon": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+    },
+    "default_title": "Tech Tutor"
+  }
+}
